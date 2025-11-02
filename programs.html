@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="برامج واشتراكات مؤسسة أمل العطاء - قضاء الصلاة والصيام، أعمال نيابية، كفالات">
+    <title>البنود والاشتراكات - أمل العطاء</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.jpg">
+</head>
+<body>
+    
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-bar-right">
+                        <a href="tel:+964" class="top-bar-link">
+                            <i class='bx bx-phone'></i>
+                            <span>+964 XXX XXX XXXX</span>
+                        </a>
+                        <a href="https://wa.me/964" class="top-bar-link" target="_blank">
+                            <i class='bx bxl-whatsapp'></i>
+                            <span>واتساب</span>
+                        </a>
+                        <span class="prayer-time">
+                            <i class='bx bx-time'></i>
+                            <span id="prayerTime">وقت الصلاة القادم: 12:30</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="top-bar-left">
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            <a href="#" target="_blank"><i class='bx bxl-telegram'></i></a>
+                            <a href="#" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                        </div>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class='bx bx-moon' id="themeIcon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="أمل العطاء" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="programs.html">البنود</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rewards.html">العطايا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل</a>
+                    </li>
+                </ul>
+                <div class="navbar-cta">
+                    <button class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#donationModal">
+                        اشترك شهرياً
+                    </button>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#donationModal">
+                        تبرع الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">البنود والاشتراكات</h1>
+            <p class="page-subtitle">اختر البند المناسب لك وابدأ رحلتك في الأجر المستمر</p>
+        </div>
+    </section>
+
+    <!-- Program 1: قضاء الصلاة والصيام -->
+    <section class="program-section" id="program1">
+        <div class="container">
+            <div class="program-intro">
+                <div class="program-badge">البند الأول</div>
+                <h2 class="program-main-title">قضاء الصلاة والصيام</h2>
+                <p class="program-description">
+                    برنامج متخصص لقضاء الصلوات والصيام عن المتوفين أو عن الأحياء الذين لديهم صلوات وصيام فائتة
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">ساعة صيام</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">دينار</span>
+                                <span class="price">5,000</span>
+                                <span class="period">/شهرياً</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> صيام يوم واحد شهرياً</li>
+                            <li><i class='bx bx-check'></i> تقرير PDF شهري مفصل</li>
+                            <li><i class='bx bx-check'></i> إيصال رسمي موثق</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#donationModal">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">مستن صيام</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">دينار</span>
+                                <span class="price">8,000</span>
+                                <span class="period">/شهرياً</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> صيام يومين شهرياً</li>
+                            <li><i class='bx bx-check'></i> تقرير PDF شهري مفصل</li>
+                            <li><i class='bx bx-check'></i> إيصال رسمي موثق</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#donationModal">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program 2: أعمال نيابة -->
+    <section class="program-section" id="program2">
+        <div class="container">
+            <div class="program-intro">
+                <div class="program-badge">البند الثاني</div>
+                <h2 class="program-main-title">أعمال نيابة</h2>
+                <p class="program-description">
+                    زيارات نيابية للمراقد المقدسة والمساجد المباركة مع توثيق كامل بالصور والفيديو
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">من الأصل</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">دينار</span>
+                                <span class="price">5,000</span>
+                                <span class="period">/شهرياً</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> زيارة أسبوعية واحدة</li>
+                            <li><i class='bx bx-check'></i> توثيق بالصور</li>
+                            <li><i class='bx bx-check'></i> تقرير شهري</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#donationModal">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">الأكثر طلباً</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">عمرة نيابية</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">دينار</span>
+                                <span class="price">10,000</span>
+                                <span class="period">/شهرياً</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> زيارتان أسبوعياً</li>
+                            <li><i class='bx bx-check'></i> عمرة نيابية سنوية</li>
+                            <li><i class='bx bx-check'></i> توثيق كامل بالفيديو</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#donationModal">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">الباقة الكاملة</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">دينار</span>
+                                <span class="price">15,000</span>
+                                <span class="period">/شهرياً</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> زيارات يومية</li>
+                            <li><i class='bx bx-check'></i> عمرة نيابية سنوية</li>
+                            <li><i class='bx bx-check'></i> قرعة العمرة المنفردة</li>
+                            <li><i class='bx bx-check'></i> هدايا سنوية</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#donationModal">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program 3: الكفالات -->
+    <section class="program-section" id="program3">
+        <div class="container">
+            <div class="program-intro">
+                <div class="program-badge">البند الثالث</div>
+                <h2 class="program-main-title">الكفالات</h2>
+                <p class="program-description">
+                    كفالة الأيتام والأسر المحتاجة مع متابعة دورية وتقارير مفصلة
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">كفالة يتيم</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">دينار</span>
+                                <span class="price">25,000</span>
+                                <span class="period">/شهرياً</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> كفالة يتيم كاملة</li>
+                            <li><i class='bx bx-check'></i> تقارير دورية عن اليتيم</li>
+                            <li><i class='bx bx-check'></i> صور وتحديثات شهرية</li>
+                            <li><i class='bx bx-check'></i> إمكانية التواصل المباشر</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#donationModal">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">نوع حاب</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">دينار</span>
+                                <span class="price">25,000</span>
+                                <span class="period">/شهرياً</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> كفالة أسرة محتاجة</li>
+                            <li><i class='bx bx-check'></i> مساعدات شهرية منتظمة</li>
+                            <li><i class='bx bx-check'></i> متابعة دورية</li>
+                            <li><i class='bx bx-check'></i> تقارير مفصلة</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#donationModal">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">مزايا مشتركة لجميع البنود</h2>
+                <p class="section-subtitle">استمتع بهذه المزايا عند الاشتراك في أي من برامجنا</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card">
+                        <i class='bx bx-file-find'></i>
+                        <h4>تقارير PDF شهرية</h4>
+                        <p>تقارير مفصلة توضح جميع الأعمال المنفذة</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card">
+                        <i class='bx bx-receipt'></i>
+                        <h4>إيصالات موثقة</h4>
+                        <p>إيصال رسمي لكل عملية اشتراك</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card">
+                        <i class='bx bx-camera'></i>
+                        <h4>توثيق بالصور</h4>
+                        <p>صور وفيديوهات للأعمال المنفذة</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="benefit-card">
+                        <i class='bx bx-support'></i>
+                        <h4>دعم مستمر</h4>
+                        <p>فريق متاح للرد على استفساراتك</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <img src="images/logo.jpg" alt="أمل العطاء" class="footer-logo">
+                        <h4>أمل العطاء - مؤسسة خيرية طبية</h4>
+                        <p>مؤسسة خيرية طبية تهدف لتقديم الدعم للمحتاجين من خلال برامج مستدامة تضمن الأثر والأجر المستمر</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">روابط سريعة</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="programs.html">البنود والاشتراكات</a></li>
+                        <li><a href="rewards.html">العطايا والهدايا</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">معلومات قانونية</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">تواصل معنا</h5>
+                    <ul class="footer-contact">
+                        <li><i class='bx bx-phone'></i> +964 XXX XXX XXXX</li>
+                        <li><i class='bx bxl-whatsapp'></i> واتساب</li>
+                        <li><i class='bx bxl-telegram'></i> تليغرام</li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-telegram'></i></a>
+                        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 أمل العطاء. جميع الحقوق محفوظة. تصميم وتطوير بواسطة Manus</p>
+                <p class="footer-version">الإصدار 1.0.0 | آخر تحديث: نوفمبر 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="floating-cta d-lg-none" data-bs-toggle="modal" data-bs-target="#donationModal">
+        <i class='bx bx-donate-heart'></i>
+        تبرع الآن
+    </button>
+
+    <button class="back-to-top" id="backToTop">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- Donation Modal (Same as index.html) -->
+    <div class="modal fade" id="donationModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">اختر نيتك والمبلغ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="donation-step active" id="step1">
+                        <div class="mb-4">
+                            <label class="form-label">اختر البرنامج *</label>
+                            <select class="form-select" id="programSelect">
+                                <option value="">اختر البرنامج</option>
+                                <option value="program1">البند الأول - قضاء الصلاة والصيام</option>
+                                <option value="program2">البند الثاني - أعمال نيابة</option>
+                                <option value="program3">البند الثالث - الكفالات</option>
+                                <option value="general">تبرع عام</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">اختر المبلغ *</label>
+                            <div class="amount-options">
+                                <input type="radio" class="btn-check" name="amount" id="amount1" value="5000">
+                                <label class="btn btn-outline-primary" for="amount1">5,000 دينار</label>
+                                
+                                <input type="radio" class="btn-check" name="amount" id="amount2" value="10000">
+                                <label class="btn btn-outline-primary" for="amount2">10,000 دينار</label>
+                                
+                                <input type="radio" class="btn-check" name="amount" id="amount3" value="15000">
+                                <label class="btn btn-outline-primary" for="amount3">15,000 دينار</label>
+                                
+                                <input type="radio" class="btn-check" name="amount" id="amount4" value="25000">
+                                <label class="btn btn-outline-primary" for="amount4">25,000 دينار</label>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">أو أدخل مبلغاً مخصصاً</label>
+                            <input type="number" class="form-control" id="customAmount" placeholder="المبلغ بالدينار">
+                        </div>
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="giftFor">
+                                <label class="form-check-label" for="giftFor">
+                                    هدية باسم شخص آخر
+                                </label>
+                            </div>
+                            <input type="text" class="form-control mt-2 d-none" id="giftName" placeholder="اسم المهدى إليه">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">ملاحظات (اختياري)</label>
+                            <textarea class="form-control" id="notes" rows="3" placeholder="أي ملاحظات إضافية..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="donation-step" id="step2">
+                        <div class="mb-3">
+                            <label class="form-label">الاسم الكامل *</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">رقم الهاتف *</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="07XX XXX XXXX">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">البريد الإلكتروني (اختياري)</label>
+                            <input type="email" class="form-control" id="email" placeholder="example@email.com">
+                        </div>
+                    </div>
+
+                    <div class="donation-step" id="step3">
+                        <div class="review-summary">
+                            <h6>ملخص التبرع</h6>
+                            <div class="review-item">
+                                <span>البرنامج:</span>
+                                <strong id="reviewProgram"></strong>
+                            </div>
+                            <div class="review-item">
+                                <span>المبلغ:</span>
+                                <strong id="reviewAmount" class="text-primary"></strong>
+                            </div>
+                            <div class="review-item" id="reviewGiftSection" style="display: none;">
+                                <span>هدية باسم:</span>
+                                <strong id="reviewGift"></strong>
+                            </div>
+                            <div class="review-item" id="reviewNotesSection" style="display: none;">
+                                <span>ملاحظات:</span>
+                                <p id="reviewNotes"></p>
+                            </div>
+                            <hr>
+                            <h6>معلومات التواصل</h6>
+                            <div class="review-item">
+                                <span>الاسم:</span>
+                                <strong id="reviewName"></strong>
+                            </div>
+                            <div class="review-item">
+                                <span>الهاتف:</span>
+                                <strong id="reviewPhone"></strong>
+                            </div>
+                            <div class="review-item" id="reviewEmailSection" style="display: none;">
+                                <span>البريد:</span>
+                                <strong id="reviewEmail"></strong>
+                            </div>
+                        </div>
+                        <div class="alert alert-info mt-3">
+                            <i class='bx bx-info-circle'></i>
+                            ملاحظة: هذا نموذج توضيحي. في النسخة النهائية، سيتم ربط نظام الدفع الإلكتروني.
+                        </div>
+                    </div>
+
+                    <div class="step-indicator">
+                        <div class="step-dot active" data-step="1">1</div>
+                        <div class="step-line"></div>
+                        <div class="step-dot" data-step="2">2</div>
+                        <div class="step-line"></div>
+                        <div class="step-dot" data-step="3">3</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+                        <i class='bx bx-right-arrow-alt'></i>
+                        السابق
+                    </button>
+                    <button type="button" class="btn btn-primary" id="nextBtn">
+                        التالي
+                        <i class='bx bx-left-arrow-alt'></i>
+                    </button>
+                    <button type="button" class="btn btn-success" id="submitBtn" style="display: none;">
+                        <i class='bx bx-check'></i>
+                        تأكيد
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
